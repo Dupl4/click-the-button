@@ -1,0 +1,179 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhud01clicklike"]
+
+[ext_resource type="Script" path="res://scripts/ui/HUDController.gd" id="1_hud"]
+
+[node name="HUD" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_hud")
+
+[node name="TopBar" type="PanelContainer" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 60.0
+grow_horizontal = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TopBar"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TopBar/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="ClassBadge" type="Label" parent="TopBar/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.75, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "[GUERRERO]"
+
+[node name="LevelLabel" type="Label" parent="TopBar/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.722, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "NIVEL 1"
+
+[node name="XPBar" type="ProgressBar" parent="TopBar/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(350, 24)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+step = 1.0
+show_percentage = true
+
+[node name="StatsLabel" type="Label" parent="TopBar/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.96, 0.97, 0.98, 1)
+theme_override_font_sizes/font_size = 18
+text = "ORO: 0 | KILLS: 0"
+
+[node name="ClickButton" type="Button" parent="."]
+custom_minimum_size = Vector2(240, 75)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -105.0
+offset_right = 120.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(120, 37)
+theme_override_colors/font_color = Color(0.1, 0.1, 0.14, 1)
+theme_override_colors/font_hover_color = Color(0.05, 0.05, 0.08, 1)
+theme_override_font_sizes/font_size = 22
+text = "⚡ CLICK (+XP)"
+
+[node name="ClassModal" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05, 0.06, 0.09, 0.92)
+
+[node name="CenterContainer" type="CenterContainer" parent="ClassModal"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ClassModal/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="Title" type="Label" parent="ClassModal/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.3, 1)
+theme_override_font_sizes/font_size = 32
+text = "ELIGE TU CLASE DE COMBATE"
+horizontal_alignment = 1
+
+[node name="SubTitle" type="Label" parent="ClassModal/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.75, 0.85, 1)
+theme_override_font_sizes/font_size = 16
+text = "Define tu rol táctico, afinidad de clics y árbol de subclases para esta run"
+horizontal_alignment = 1
+
+[node name="ClassesContainer" type="HBoxContainer" parent="ClassModal/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="DraftModal" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05, 0.06, 0.09, 0.88)
+
+[node name="CenterContainer" type="CenterContainer" parent="DraftModal"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DraftModal/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="Title" type="Label" parent="DraftModal/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.722, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "¡SUBIDA DE NIVEL! ELIGE UNA HABILIDAD"
+horizontal_alignment = 1
+
+[node name="CardsContainer" type="HBoxContainer" parent="DraftModal/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="EvolutionModal" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08, 0.04, 0.12, 0.94)
+
+[node name="CenterContainer" type="CenterContainer" parent="EvolutionModal"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="EvolutionModal/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="Title" type="Label" parent="EvolutionModal/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.2, 1)
+theme_override_font_sizes/font_size = 34
+text = "★ HITO NIVEL 10: METAMORFOSIS DE SUBCLASE ★"
+horizontal_alignment = 1
+
+[node name="SubTitle" type="Label" parent="EvolutionModal/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85, 0.8, 0.95, 1)
+theme_override_font_sizes/font_size = 17
+text = "Selecciona tu bifurcación irreversible para potenciar tus estadísticas y desatar un rasgo exclusivo"
+horizontal_alignment = 1
+
+[node name="EvolutionContainer" type="HBoxContainer" parent="EvolutionModal/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
