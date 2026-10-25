@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SubclassData" load_steps=2 format=3 uid="uid://csub03archmag"]
+
+[ext_resource type="Script" path="res://scripts/data/SubclassData.gd" id="1_sub"]
+
+[resource]
+script = ExtResource("1_sub")
+subclass_id = &"archmage"
+title = "Archimago (Arcanista)"
+description = "+40 Daño, +80 Rango. Explosión arcana masiva de 140px de radio."
+delta_max_health = -10.0
+delta_attack_power = 40.0
+delta_cooldown = 0.2
+delta_range = 80.0
+delta_speed = 10.0
+delta_click_multiplier = -0.1
+tint_color = Color(0.75, 0.35, 1, 1)
+trait_description = "Estallido Arcano: Radio explosivo de proyectiles aumentado a 140px masivos."

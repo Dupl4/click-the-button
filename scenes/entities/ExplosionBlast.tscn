@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bblast01exp"]
+
+[ext_resource type="Script" path="res://scripts/combat/ExplosionBlast.gd" id="1_blast"]
+
+[node name="ExplosionBlast" type="Node2D"]
+script = ExtResource("1_blast")

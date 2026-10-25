@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SubclassData" load_steps=2 format=3 uid="uid://csub04chrono"]
+
+[ext_resource type="Script" path="res://scripts/data/SubclassData.gd" id="1_sub"]
+
+[resource]
+script = ExtResource("1_sub")
+subclass_id = &"chronomancer"
+title = "Cronomante (Temporal)"
+description = "+15 HP, +15 Daño. Disparo cuántico continuo a 0.25s de cadencia."
+delta_max_health = 15.0
+delta_attack_power = 15.0
+delta_cooldown = -0.4
+delta_range = 50.0
+delta_speed = 25.0
+delta_click_multiplier = 0.2
+tint_color = Color(0.2, 0.9, 0.85, 1)
+trait_description = "Aceleración Cuántica: Disparo constante de micro-orbes cuánticos a cadencia ultra-rápida (0.25s)."

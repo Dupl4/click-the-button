@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="ClassData" load_steps=4 format=3 uid="uid://ccls02mage"]
+
+[ext_resource type="Script" path="res://scripts/data/ClassData.gd" id="1_cls"]
+[ext_resource type="Resource" uid="uid://csub03archmag" path="res://resources/classes/subclasses/archmage.tres" id="2_archmage"]
+[ext_resource type="Resource" uid="uid://csub04chrono" path="res://resources/classes/subclasses/chronomancer.tres" id="3_chrono"]
+
+[resource]
+script = ExtResource("1_cls")
+class_id = &"mage"
+class_name_str = "Mago"
+role_description = "Hechicero de rango con explosiones arcanas en área (AoE) de 80px."
+base_health = 80.0
+base_attack_power = 45.0
+base_cooldown = 1.4
+base_range = 320.0
+base_move_speed = 170.0
+click_multiplier = 0.8
+projectile_speed = 360.0
+projectile_pierce = 1
+projectile_aoe_radius = 80.0
+projectile_count = 1
+projectile_spread_deg = 0.0
+primary_color = Color(0.65, 0.35, 0.95, 1)
+core_color = Color(0.35, 0.12, 0.55, 1)
+projectile_color = Color(0.85, 0.45, 1, 1)
+subclasses = [ExtResource("2_archmage"), ExtResource("3_chrono")]

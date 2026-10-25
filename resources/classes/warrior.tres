@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="ClassData" load_steps=4 format=3 uid="uid://ccls01warrior"]
+
+[ext_resource type="Script" path="res://scripts/data/ClassData.gd" id="1_cls"]
+[ext_resource type="Resource" uid="uid://csub01paladin" path="res://resources/classes/subclasses/paladin.tres" id="2_paladin"]
+[ext_resource type="Resource" uid="uid://csub02berserk" path="res://resources/classes/subclasses/berserker.tres" id="3_berserk"]
+
+[resource]
+script = ExtResource("1_cls")
+class_id = &"warrior"
+class_name_str = "Guerrero"
+role_description = "Guerrero cuerpo a cuerpo con barrido de espada en arco frontal (Cleave)."
+base_health = 140.0
+base_attack_power = 30.0
+base_cooldown = 1.0
+base_range = 130.0
+base_move_speed = 160.0
+click_multiplier = 1.0
+projectile_speed = 420.0
+projectile_pierce = 1
+projectile_aoe_radius = 0.0
+projectile_count = 1
+projectile_spread_deg = 0.0
+primary_color = Color(0.29, 0.5, 0.79, 1)
+core_color = Color(0.12, 0.25, 0.48, 1)
+projectile_color = Color(0.4, 0.7, 1, 1)
+subclasses = [ExtResource("2_paladin"), ExtResource("3_berserk")]

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SubclassData" load_steps=2 format=3 uid="uid://csub01paladin"]
+
+[ext_resource type="Script" path="res://scripts/data/SubclassData.gd" id="1_sub"]
+
+[resource]
+script = ExtResource("1_sub")
+subclass_id = &"paladin"
+title = "Paladín (Protector)"
+description = "+60 HP, +10 Daño. Reflejo sacro defensivo en área."
+delta_max_health = 60.0
+delta_attack_power = 10.0
+delta_cooldown = -0.1
+delta_range = 30.0
+delta_speed = -10.0
+delta_click_multiplier = 0.0
+tint_color = Color(1, 0.85, 0.25, 1)
+trait_description = "Aura Sacra: 15% del daño recibido se refleja en onda defensiva."
