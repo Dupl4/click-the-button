@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SubclassData" load_steps=2 format=3 uid="uid://csub06windrun"]
+
+[ext_resource type="Script" path="res://scripts/data/SubclassData.gd" id="1_sub"]
+
+[resource]
+script = ExtResource("1_sub")
+subclass_id = &"windrunner"
+title = "Corredor del Viento"
+description = "+10 HP, +10 Daño, +40 Velocidad. Disparo triple en abanico."
+delta_max_health = 10.0
+delta_attack_power = 10.0
+delta_cooldown = -0.25
+delta_range = 40.0
+delta_speed = 40.0
+delta_click_multiplier = 0.4
+tint_color = Color(0.3, 1.0, 0.5, 1)
+trait_description = "Ráfaga Céfiros: Dispara 3 flechas simultáneas con abanico visible de 25 grados."

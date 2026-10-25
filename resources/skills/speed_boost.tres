@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SkillCardData" load_steps=2 format=3 uid="uid://cskill01speed"]
+
+[ext_resource type="Script" path="res://scripts/leveling/SkillCardData.gd" id="1_skill"]
+
+[resource]
+script = ExtResource("1_skill")
+id = &"speed_boost"
+title = "Botas de la Tempestad"
+description = "+25% Velocidad de Movimiento"
+type = 0
+stat_modifier_type = &"move_speed_multiplier"
+modifier_value = 0.25

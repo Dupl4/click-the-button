@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SkillCardData" load_steps=2 format=3 uid="uid://cskill02health"]
+
+[ext_resource type="Script" path="res://scripts/leveling/SkillCardData.gd" id="1_skill"]
+
+[resource]
+script = ExtResource("1_skill")
+id = &"health_boost"
+title = "Corazón de Titán"
+description = "+30% Vida Máxima y Curación"
+type = 0
+stat_modifier_type = &"max_health_multiplier"
+modifier_value = 0.30

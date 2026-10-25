@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SubclassData" load_steps=2 format=3 uid="uid://csub02berserk"]
+
+[ext_resource type="Script" path="res://scripts/data/SubclassData.gd" id="1_sub"]
+
+[resource]
+script = ExtResource("1_sub")
+subclass_id = &"berserker"
+title = "Berserker (Coloso)"
+description = "+30 HP, +25 Daño, +20 Velocidad. Clic furioso acelerado."
+delta_max_health = 30.0
+delta_attack_power = 25.0
+delta_cooldown = -0.3
+delta_range = 40.0
+delta_speed = 20.0
+delta_click_multiplier = 0.2
+tint_color = Color(0.95, 0.2, 0.2, 1)
+trait_description = "Furia Berserker: Mayor cadencia de golpe y bonificación de clic."

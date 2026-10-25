@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SubclassData" load_steps=2 format=3 uid="uid://csub05sniper"]
+
+[ext_resource type="Script" path="res://scripts/data/SubclassData.gd" id="1_sub"]
+
+[resource]
+script = ExtResource("1_sub")
+subclass_id = &"sniper"
+title = "Francotirador (Sniper)"
+description = "+50 Daño, +150 Rango. Rayo penetrante de largo alcance (pierce 4, 750px/s)."
+delta_max_health = -15.0
+delta_attack_power = 50.0
+delta_cooldown = 0.3
+delta_range = 150.0
+delta_speed = -15.0
+delta_click_multiplier = 0.1
+tint_color = Color(0.95, 0.8, 0.2, 1)
+trait_description = "Balística Precisa: Rayo penetrante de largo alcance (600px) que atraviesa filas enteras."
