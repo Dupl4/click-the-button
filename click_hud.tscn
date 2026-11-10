@@ -1,0 +1,168 @@
+[gd_scene load_steps=2 format=3 uid="uid://bclickhud3d"]
+
+[ext_resource type="Script" path="res://click_hud.gd" id="1_hud"]
+
+[node name="ClickHUD" type="CanvasLayer"]
+script = ExtResource("1_hud")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PanelTop" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 65.0
+grow_horizontal = 2
+
+[node name="LabelClase" type="Label" parent="Control/PanelTop"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 8.0
+offset_right = 220.0
+offset_bottom = 31.0
+text = "Clase: Guerrero (Nv. 1)"
+
+[node name="BarVida" type="ProgressBar" parent="Control/PanelTop"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 35.0
+offset_right = 230.0
+offset_bottom = 55.0
+value = 100.0
+show_percentage = false
+
+[node name="LabelVida" type="Label" parent="Control/PanelTop/BarVida"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "120 / 120 HP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BarXP" type="ProgressBar" parent="Control/PanelTop"]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 35.0
+offset_right = 430.0
+offset_bottom = 55.0
+show_percentage = false
+
+[node name="LabelXP" type="Label" parent="Control/PanelTop/BarXP"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "XP: 0 / 25"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelInfo" type="Label" parent="Control/PanelTop"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 18.0
+offset_right = 150.0
+offset_bottom = 45.0
+grow_horizontal = 2
+text = "Oleada 1  |  00:00  |  Bajas: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelOro" type="Label" parent="Control/PanelTop"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -160.0
+offset_top = 18.0
+offset_right = -20.0
+offset_bottom = 45.0
+grow_horizontal = 0
+text = "🪙 Oro: 0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="BtnClick" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -210.0
+offset_top = -80.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "🔥 ¡CLICK! (+Daño/+Oro)"
+
+[node name="ModalMejora" type="Panel" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -275.0
+offset_top = -120.0
+offset_right = 275.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="Control/ModalMejora"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Titulo" type="Label" parent="Control/ModalMejora/VBox"]
+layout_mode = 2
+text = "⭐ ¡NIVEL ALCANZADO! Elige tu mejora:"
+horizontal_alignment = 1
+
+[node name="HBox" type="HBoxContainer" parent="Control/ModalMejora/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="BtnOpc1" type="Button" parent="Control/ModalMejora/VBox/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "⚔️ Filo Mortal
++25% Daño"
+
+[node name="BtnOpc2" type="Button" parent="Control/ModalMejora/VBox/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "👟 Velocidad
++20% Movimiento"
+
+[node name="BtnOpc3" type="Button" parent="Control/ModalMejora/VBox/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "🛡️ Vitalidad
++30 Vida Máx"

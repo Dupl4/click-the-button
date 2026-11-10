@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bhud3d"]
+
+[ext_resource type="Script" path="res://hud.gd" id="1_hud"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_hud")
+
+[node name="Texto" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 160.0
+offset_bottom = 50.0
+text = "Vida: 120"

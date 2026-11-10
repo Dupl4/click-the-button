@@ -1,0 +1,244 @@
+[gd_scene load_steps=2 format=3 uid="uid://bevolucionmodal3d"]
+
+[ext_resource type="Script" path="res://modal_evolucion.gd" id="1_modal"]
+
+[node name="ModalEvolucion" type="CanvasLayer"]
+process_mode = 3
+layer = 25
+script = ExtResource("1_modal")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FondoOscuro" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.04, 0.05, 0.08, 0.78)
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -440.0
+offset_top = -230.0
+offset_right = 440.0
+offset_bottom = 230.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin" type="MarginContainer" parent="Control/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBox" type="VBoxContainer" parent="Control/Panel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Titulo" type="Label" parent="Control/Panel/Margin/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "⚡ ¡HITO DE EVOLUCIÓN ALCANZADO! ⚡"
+horizontal_alignment = 1
+
+[node name="Subtitulo" type="Label" parent="Control/Panel/Margin/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85, 0.85, 0.85, 1)
+theme_override_font_sizes/font_size = 14
+text = "Has superado el rango de Novato. Selecciona tu metamorfosis y estilo de combate:"
+horizontal_alignment = 1
+
+[node name="HBoxCartas" type="HBoxContainer" parent="Control/Panel/Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="CardGuerrero" type="Panel" parent="Control/Panel/Margin/VBox/HBoxCartas"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBox" type="VBoxContainer" parent="Control/Panel/Margin/VBox/HBoxCartas/CardGuerrero"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="Nombre" type="Label" parent="Control/Panel/Margin/VBox/HBoxCartas/CardGuerrero/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.45, 0.35, 1)
+theme_override_font_sizes/font_size = 18
+text = "⚔️ GUERRERO"
+horizontal_alignment = 1
+
+[node name="Rol" type="Label" parent="Control/Panel/Margin/VBox/HBoxCartas/CardGuerrero/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75, 0.75, 0.75, 1)
+theme_override_font_sizes/font_size = 12
+text = "Tanque / Melee Colosal"
+horizontal_alignment = 1
+
+[node name="Desc" type="Label" parent="Control/Panel/Margin/VBox/HBoxCartas/CardGuerrero/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 12
+text = "• Salud: 160 HP (+60%)
+• Daño Melee: 22 (+83%)
+• Rango: 3.0 m
+• Cadencia: 0.70 s
+• Arma: Espada Kenney
+• Corte 360° y Bloqueo"
+autowrap_mode = 2
+
+[node name="BtnElegirGuerrero" type="Button" parent="Control/Panel/Margin/VBox/HBoxCartas/CardGuerrero"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = -45.0
+offset_right = -12.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Evolucionar a Guerrero"
+
+[node name="CardCazador" type="Panel" parent="Control/Panel/Margin/VBox/HBoxCartas"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBox" type="VBoxContainer" parent="Control/Panel/Margin/VBox/HBoxCartas/CardCazador"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="Nombre" type="Label" parent="Control/Panel/Margin/VBox/HBoxCartas/CardCazador/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.95, 0.5, 1)
+theme_override_font_sizes/font_size = 18
+text = "🏹 CAZADOR"
+horizontal_alignment = 1
+
+[node name="Rol" type="Label" parent="Control/Panel/Margin/VBox/HBoxCartas/CardCazador/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75, 0.75, 0.75, 1)
+theme_override_font_sizes/font_size = 12
+text = "Ranger / Ráfaga Veloz"
+horizontal_alignment = 1
+
+[node name="Desc" type="Label" parent="Control/Panel/Margin/VBox/HBoxCartas/CardCazador/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 12
+text = "• Salud: 100 HP
+• Daño: 14 (+16%)
+• Rango: 7.5 m (Largo)
+• Cadencia: 0.45 s (Ametralladora)
+• Vel. Carrera: 6.4 m/s
+• Flechas a distancia"
+autowrap_mode = 2
+
+[node name="BtnElegirCazador" type="Button" parent="Control/Panel/Margin/VBox/HBoxCartas/CardCazador"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = -45.0
+offset_right = -12.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Evolucionar a Cazador"
+
+[node name="CardMago" type="Panel" parent="Control/Panel/Margin/VBox/HBoxCartas"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBox" type="VBoxContainer" parent="Control/Panel/Margin/VBox/HBoxCartas/CardMago"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="Nombre" type="Label" parent="Control/Panel/Margin/VBox/HBoxCartas/CardMago/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.7, 1.0, 1)
+theme_override_font_sizes/font_size = 18
+text = "🔮 MAGO"
+horizontal_alignment = 1
+
+[node name="Rol" type="Label" parent="Control/Panel/Margin/VBox/HBoxCartas/CardMago/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75, 0.75, 0.75, 1)
+theme_override_font_sizes/font_size = 12
+text = "Arcanista / Alto Impacto"
+horizontal_alignment = 1
+
+[node name="Desc" type="Label" parent="Control/Panel/Margin/VBox/HBoxCartas/CardMago/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 12
+text = "• Salud: 85 HP
+• Daño Mágico: 28 (+133%)
+• Rango: 5.5 m
+• Cadencia: 0.90 s
+• Proyectiles arcanos
+• Cañón de cristal"
+autowrap_mode = 2
+
+[node name="BtnElegirMago" type="Button" parent="Control/Panel/Margin/VBox/HBoxCartas/CardMago"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = -45.0
+offset_right = -12.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Evolucionar a Mago"

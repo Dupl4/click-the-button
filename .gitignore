@@ -1,0 +1,22 @@
+# Godot cache & temporales
+.godot/
+*.tmp
+*.pdf
+*_extracted.txt
+out_*.txt
+log_*.txt
+test_*.txt
+__pycache__/
+generador*.py
+generar*.py
+automatizar*.py
+reconstruir*.py
+crear_talleres*.py
+*.uid
+
+# Documentos en la raiz ignorados, pero permitidos dentro de talleres/
+*.docx
+!talleres/**/*.docx
+!talleres/**/*.md
+
+!Plan_de_Proyecto_Clicklike_3D.docx

@@ -1,0 +1,1 @@
+Solución del Taller 7 (solo profesor). Acciones nuevas: correr (Shift) y saltar (Espacio).

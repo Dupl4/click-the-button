@@ -1,0 +1,18 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://espectro.gd" id="1_espectro"]
+[ext_resource type="PackedScene" path="res://personaje/character-female-b.glb" id="2_modelo"]
+
+[sub_resource type="CapsuleShape3D" id="CapsulaEspectro"]
+radius = 0.3
+height = 1.4
+
+[node name="Espectro" type="CharacterBody3D"]
+script = ExtResource("1_espectro")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+shape = SubResource("CapsulaEspectro")
+
+[node name="Modelo" parent="." instance=ExtResource("2_modelo")]
+transform = Transform3D(-1.9, 0, 0, 0, 1.9, 0, 0, 0, -1.9, 0, 0, 0)

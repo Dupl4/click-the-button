@@ -1,0 +1,18 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://bruto.gd" id="1_bruto"]
+[ext_resource type="PackedScene" path="res://personaje/character-male-d.glb" id="2_modelo"]
+
+[sub_resource type="CapsuleShape3D" id="CapsulaBruto"]
+radius = 0.65
+height = 2.6
+
+[node name="Bruto" type="CharacterBody3D"]
+script = ExtResource("1_bruto")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
+shape = SubResource("CapsulaBruto")
+
+[node name="Modelo" parent="." instance=ExtResource("2_modelo")]
+transform = Transform3D(-3.8, 0, 0, 0, 3.8, 0, 0, 0, -3.8, 0, 0, 0)
